@@ -1,0 +1,6 @@
+{
+    "GOAL": <GOAL>,
+    "PROBLEM": <PROBLEM>,
+    "SOLUTION_TASK": <SOLUTION_TASK>,
+    "RESPONSES": <RESPONSES>
+}
