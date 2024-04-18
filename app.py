@@ -12,13 +12,13 @@ def test_method():
 
 @app.route('/create_form/', methods=["POST"])
 def create_form():
-  goal = request.args.get("GOAL")
-  problem = request.args.get("PROBLEM")
-  form_length = request.args.get("FORM_LENGTH")
-  allowed_types = request.args.get("ALLOWED_TYPES")
-  solution_task = request.args.get("SOLUTION_TASK")
+  data = request.json
+  goal = data.get("GOAL")
+  problem = data.get("PROBLEM")
+  form_length = data.get("FORM_LENGTH")
+  allowed_types = data.get("ALLOWED_TYPES")
+  solution_task = data.get("SOLUTION_TASK")
 
-  print(request.args)
   print(goal)
   print(problem)
   print(form_length)
@@ -29,12 +29,12 @@ def create_form():
 
 @app.route('/submit_form/', methods=["POST"])
 def submit_form():
-  goal = request.args.get("GOAL")
-  problem = request.args.get("PROBLEM")
-  solution_task = request.args.get("SOLUTION_TASK")
-  responses = request.args.get("RESPONSES")
+  data = request.json
+  goal = data.get("GOAL")
+  problem = data.get("PROBLEM")
+  solution_task = data.get("SOLUTION_TASK")
+  responses = data.get("RESPONSES")
 
-  print(request.args)
   print(goal)
   print(problem)
   print(solution_task)
