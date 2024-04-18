@@ -19,6 +19,7 @@ def create_form():
   allowed_types = data.get("ALLOWED_TYPES")
   solution_task = data.get("SOLUTION_TASK")
 
+  print(data)
   print(goal)
   print(problem)
   print(form_length)
@@ -35,6 +36,7 @@ def submit_form():
   solution_task = data.get("SOLUTION_TASK")
   responses = data.get("RESPONSES")
 
+  print(data)
   print(goal)
   print(problem)
   print(solution_task)
