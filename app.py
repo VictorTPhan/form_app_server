@@ -18,6 +18,13 @@ def create_form():
   allowed_types = request.args.get("ALLOWED_TYPES")
   solution_task = request.args.get("SOLUTION_TASK")
 
+  print(request.args)
+  print(goal)
+  print(problem)
+  print(form_length)
+  print(allowed_types)
+  print(solution_task)
+
   return jsonify(form_creator.create_form(goal, problem, form_length, allowed_types, solution_task))
 
 @app.route('/submit_form/', methods=["POST"])
@@ -26,6 +33,12 @@ def submit_form():
   problem = request.args.get("PROBLEM")
   solution_task = request.args.get("SOLUTION_TASK")
   responses = request.args.get("RESPONSES")
+
+  print(request.args)
+  print(goal)
+  print(problem)
+  print(solution_task)
+  print(responses)
 
   return jsonify(form_creator.submit_form(goal, problem, solution_task, responses))
 
