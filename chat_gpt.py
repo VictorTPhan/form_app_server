@@ -13,6 +13,7 @@ def get_json_response(system_prompt, user_prompt):
             {"role": "user", "content": user_prompt}
         ]
     )
+    print(response.choices[0].message.content)
     return response.choices[0].message.content
 
 def get_standard_response(system_prompt, user_prompt):
@@ -23,4 +24,5 @@ def get_standard_response(system_prompt, user_prompt):
             {"role": "user", "content": user_prompt}
         ]
     )
+    print(response.choices[0].message.content)
     return response.choices[0].message.content
