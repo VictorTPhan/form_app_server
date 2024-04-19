@@ -24,6 +24,6 @@ def submit_form(goal, problem, solution_task, responses):
     submit_form_user_prompt = submit_form_user_prompt.replace("<GOAL>", goal)
     submit_form_user_prompt = submit_form_user_prompt.replace("<PROBLEM>", problem)
     submit_form_user_prompt = submit_form_user_prompt.replace("<SOLUTION_TASK>", solution_task)
-    submit_form_user_prompt = submit_form_user_prompt.replace("<RESPONSES>", str(responses.items))
+    submit_form_user_prompt = submit_form_user_prompt.replace("<RESPONSES>", str(responses.items()))
 
     return json.loads(chat_gpt.get_standard_response(submit_form_system_prompt, submit_form_user_prompt))
