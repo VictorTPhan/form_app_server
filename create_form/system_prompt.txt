@@ -18,25 +18,26 @@ Once you process my submission, [SOLUTION_TASK].
 
 You will send back a response in JSON format as follows. The field questions must be of size [FORM_LENGTH].
 {
-    "form_name": <name of form>
-    "questions": [
+    "FORM_NAME": <name of form>
+    "EMOJI": <fitting emoji>,
+    "QUESTIONS": [
         {
-            "type": "SHORT_ANSWER_RESPONSE",
-            "question": <the question>
+            "TYPE": "SHORT_ANSWER_RESPONSE",
+            "QUESTION": <the question>
         },
         {
-            "type": "LONG_ANSWER_RESPONSE",
-            "question": <the question>
+            "TYPE": "LONG_ANSWER_RESPONSE",
+            "QUESTION": <the question>
         },
         {
-            "type": "MULTIPLE_CHOICE",
-            "question": <the question>,
-            "options": <list of all option strings>
+            "TYPE": "MULTIPLE_CHOICE",
+            "QUESTION": <the question>,
+            "OPTIONS": <list of all option strings>
         },
         {
-            "type": "CHECKBOX",
-            "question": <the question>,
-            "options": <list of all option strings>
+            "TYPE": "CHECKBOX",
+            "QUESTION": <the question>,
+            "OPTIONS": <list of all option strings>
         },
     ]
 }
