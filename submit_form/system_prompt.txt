@@ -13,7 +13,9 @@ A user will send you the following JSON:
     ]
 }
 
-The user wants to [GOAL] but [PROBLEM]. They want you to [SOLUTION_TASK]. Fulfill their request with their responses in mind. Your response will come in the form of this JSON:
+The user wants to [GOAL] but [PROBLEM]. They want you to [SOLUTION_TASK]. Your response will come in the form of this JSON.
+Your response should be detailed, long, and not just a single paragraph. Speak formally. Put the user's responses into consideration but do not explicitly repeat back their answers.
+Be mindful of the solution task that they send. Whenever possible use numbered steps or bullet points to clearly outline your response.
 
 {
     "NAME": <fitting title for the response>,
