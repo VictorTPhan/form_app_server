@@ -1,7 +1,8 @@
+import os
 from openai import OpenAI
 
 client = OpenAI(
-    api_key="sk-proj-zdQ2gSRT9t4kARy8qFK6T3BlbkFJmYVa09l6hVA45rqcz1Lk",
+    api_key = os.getenv("OPENAI_API_KEY")
 )
 
 def get_json_response(system_prompt, user_prompt):

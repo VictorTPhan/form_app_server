@@ -12,6 +12,10 @@ def test_method():
 
 @app.route('/create_form/', methods=["POST"])
 def create_form():
+  '''
+  A POST API that is called whenever the application wants to create a form.
+  This requires a JSON payload containing the form's parameters (determined by the system prompt)
+  '''
   data = request.json
   goal = data.get("GOAL")
   problem = data.get("PROBLEM")
@@ -19,28 +23,21 @@ def create_form():
   allowed_types = data.get("ALLOWED_TYPES")
   solution_task = data.get("SOLUTION_TASK")
 
-  print(data)
-  print(goal)
-  print(problem)
-  print(form_length)
-  print(allowed_types)
-  print(solution_task)
-
   return jsonify(form_creator.create_form(goal, problem, form_length, allowed_types, solution_task))
 
 @app.route('/submit_form/', methods=["POST"])
 def submit_form():
+  '''
+  A POST API that is called whenever the application submits a response to
+  a generated form. This requires a JSON payload containing the response's parameters
+  (determined by the system prompt)
+  '''
+  
   data = request.json
   goal = data.get("GOAL")
   problem = data.get("PROBLEM")
   solution_task = data.get("SOLUTION_TASK")
   responses = data.get("RESPONSES")
-
-  print(data)
-  print(goal)
-  print(problem)
-  print(solution_task)
-  print(responses)
 
   return jsonify(form_creator.submit_form(goal, problem, solution_task, responses))
 
